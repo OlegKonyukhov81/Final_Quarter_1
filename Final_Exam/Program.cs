@@ -17,3 +17,15 @@ void PrintText(string[] array)
 Console.Write($"[");
 PrintText(text);
 Console.Write($"]");
+
+int FindLength(string[] array)
+{
+    string position = string.Empty;
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        position = array[i];
+        if (position.Length <= 3) count ++;
+    }
+    return count;
+}
