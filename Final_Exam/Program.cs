@@ -29,3 +29,26 @@ int FindLength(string[] array)
     }
     return count;
 }
+
+string[] FillArray (string[] array, int arrayLength)
+{
+    string[] sort = new string[arrayLength];
+    string position = string.Empty;
+    int sortIndex = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        position = array[i];
+        if (position.Length <= 3)
+        {
+            sort[sortIndex] = position;
+            sortIndex ++;
+        }
+    }
+    return sort;
+}
+int lengthArray = FindLength(text);
+string[] sortArray = FillArray(text, lengthArray);
+
+Console.Write($" -> [");
+PrintText(sortArray);
+Console.Write($"]");
